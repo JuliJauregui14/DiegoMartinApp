@@ -1,5 +1,5 @@
 import express from "express";
-import usersRoutes from "./routes/users.routes.js";
+import clienteRoutes from "./routes/clienteRoutes.js";
 import morgan from "morgan";
 import { PORT } from "./config.js";
 
@@ -11,7 +11,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-app.use(usersRoutes);
+app.use(clienteRoutes);
 
 app.listen(PORT);
 // eslint-disable-next-line no-console

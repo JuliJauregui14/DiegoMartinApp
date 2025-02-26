@@ -1,0 +1,17 @@
+
+GET http://localhost:5000/clientes HTTP/1.1
+
+##
+PUT   http://localhost:5000/clientes/1 HTTP/1.1
+content-type: application/json
+
+{
+  "id": 1,
+  "nombre": "Jorges Perez",
+  "email": "jorgeperez@gmail.com",
+  "telefono": 1122554879,
+  "direccion": "Calle falsa 123",
+  "cuit": "25365489750"
+}
+
+
