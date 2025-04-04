@@ -1,6 +1,10 @@
 import { Router } from 'express';
 import {
-    getClientes, getClienteById, createCliente, updateCliente, deleteCliente
+    getClientes,
+    createCliente, 
+    getClienteById, 
+    updateCliente, 
+    deleteCliente
 } from '../controllers/clienteController.js';
 import { validateSchema } from "../middlewares/validateSchema.js";
 import clienteValidator from "../schemas/clienteValidator.js"
@@ -23,6 +27,6 @@ router.get('/clientes/:id', getClienteById);
 router.put('/clientes/:id', validateSchema(clienteSchema), updateCliente);
 
 //Delete cliente
-router.delete('/:id', deleteCliente);
+router.delete('/clientes/:id', deleteCliente);
 
 export default router;
